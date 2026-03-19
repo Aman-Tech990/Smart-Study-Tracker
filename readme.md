@@ -1,40 +1,86 @@
-# Smart Study Tracker 📚
+Got it 😄 — **one single clean markdown block**, no internal splits, no extra IDs — just copy-paste 👇
+
+```md
+# 📚 Smart Study Tracker (GUI Version)
 
 ![Java](https://img.shields.io/badge/Java-17-orange)
 ![SQLite](https://img.shields.io/badge/Database-SQLite-blue)
 ![JDBC](https://img.shields.io/badge/JDBC-SQLite-green)
-![CLI](https://img.shields.io/badge/Interface-CLI-lightgrey)
+![GUI](https://img.shields.io/badge/Interface-Swing_GUI-purple)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
+![Repo Size](https://img.shields.io/github/repo-size/Aman-Tech990/Smart-Study-Tracker)
+![Stars](https://img.shields.io/github/stars/Aman-Tech990/Smart-Study-Tracker?style=social)
+![Forks](https://img.shields.io/github/forks/Aman-Tech990/Smart-Study-Tracker?style=social)
+![Issues](https://img.shields.io/github/issues/Aman-Tech990/Smart-Study-Tracker)
+![Last Commit](https://img.shields.io/github/last-commit/Aman-Tech990/Smart-Study-Tracker)
+![Top Language](https://img.shields.io/github/languages/top/Aman-Tech990/Smart-Study-Tracker)
 
-A **Java-based Command Line Study Tracker** that allows students to record, view, and manage their study sessions.  
-The application uses an **SQLite database with JDBC** for persistent storage.
+---
 
-This project demonstrates **Java backend concepts, JDBC connectivity, the DAO design pattern, and database CRUD operations.**
+## 🧠 About the Project
+
+**Smart Study Tracker** is a Java-based GUI application designed to help students track and manage their study sessions efficiently.
+
+This project demonstrates real-world backend + GUI integration using:
+
+- Java (Core)
+- Swing (GUI Development)
+- SQLite (Database)
+- JDBC (Connectivity)
+- DAO Design Pattern
+
+The application allows users to add, view, and delete study sessions through an interactive graphical interface.
 
 ---
 
 ## ✨ Features
 
-- Add study sessions  
-- View all study sessions  
-- Delete a study session  
-- SQLite database storage  
-- JDBC connectivity  
-- DAO-based project structure  
-- Persistent local database
+- ➕ Add Study Sessions  
+- 📋 View Sessions in Table Format  
+- ❌ Delete Selected Session  
+- 💾 Persistent Storage using SQLite  
+- 🖥️ Interactive GUI (Java Swing)  
+- 🧠 Clean architecture using DAO pattern  
+
+---
+
+## 🖥️ GUI Preview
+
+```
+
+---
+
+## | Smart Study Tracker               |
+
+| Subject: [**********]                |
+| Topic:   [**********]                |
+| Duration:[**********]                |
+| Date:    [**********]                |
+| [Add Session]  [Delete Selected]     |
+----------------------------------------
+
+| ID | Subject | Topic | Duration | Date |
+|----------------------------------------|
+| 1  | DSA     | Graph | 2 hrs    | ...  |
+------------------------------------------
+
+```
 
 ---
 
 ## 🏗️ Project Structure
 
 ```
+
 Smart-Study-Tracker
 │
+├── GUI.java
 ├── Main.java
 ├── Database.java
 ├── StudySession.java
 ├── StudySessionDAO.java
 │
+├── GUI.class
 ├── Main.class
 ├── Database.class
 ├── StudySession.class
@@ -42,6 +88,7 @@ Smart-Study-Tracker
 │
 ├── sqlite-jdbc.jar
 ├── studytracker.db
+
 ```
 
 ---
@@ -51,35 +98,28 @@ Smart-Study-Tracker
 | Technology | Purpose |
 |------------|--------|
 | Java | Core programming language |
+| Swing | GUI Interface |
 | SQLite | Lightweight embedded database |
 | JDBC | Database connectivity |
-| CLI | Command Line Interface |
+| DAO Pattern | Clean architecture |
 
 ---
 
 ## 🧠 Architecture
 
-The application follows the **DAO (Data Access Object) pattern**.
-
 ```
-User (CLI)
-   ↓
-Main.java
-   ↓
+
+User (GUI)
+↓
+GUI.java
+↓
 StudySessionDAO
-   ↓
+↓
 Database.java
-   ↓
+↓
 SQLite Database
-```
 
-This structure separates:
-
-- Business logic  
-- Database operations  
-- Data model  
-
-making the project cleaner and easier to maintain.
+````
 
 ---
 
@@ -88,7 +128,7 @@ making the project cleaner and easier to maintain.
 Table: `sessions`
 
 | Column | Type |
-|------|------|
+|--------|------|
 | id | INTEGER PRIMARY KEY AUTOINCREMENT |
 | subject | TEXT |
 | topic | TEXT |
@@ -99,76 +139,43 @@ Table: `sessions`
 
 ## ▶️ How to Run the Project
 
-### Compile the project
+### 🔹 Compile
 
 ```bash
 javac -cp ".;sqlite-jdbc.jar" *.java
-```
+````
 
-### Run the application
+### 🔹 Run GUI
 
 ```bash
-java -cp ".;sqlite-jdbc.jar" Main
-```
-
----
-
-## 💻 Application Menu
-
-```
-SMART STUDY TRACKER
-
-1. Add Session
-2. View Sessions
-3. Delete Session
-4. Exit
-```
-
----
-
-## 📝 Example Output
-
-```
-SMART STUDY TRACKER
-1. Add Session
-2. View Sessions
-3. Delete Session
-4. Exit
-Choose option: 1
-
-Subject: DSA
-Topic: Graph Traversal
-Duration (hours): 2
-Date: 2026-03-14
-
-Session added successfully!
+java -cp ".;sqlite-jdbc.jar" GUI
 ```
 
 ---
 
 ## 🎯 Learning Outcomes
 
-This project helps practice:
-
-- JDBC database connectivity
-- SQLite integration
-- Java CLI application development
-- DAO design pattern
-- SQL CRUD operations
-- Structured Java project architecture
+* JDBC database connectivity
+* SQLite integration
+* Java Swing GUI development
+* DAO (Data Access Object) pattern
+* SQL CRUD operations
+* Clean and modular Java architecture
 
 ---
 
-## 📌 Possible Improvements
+## 📌 Future Improvements
 
-- Update study sessions  
-- Search sessions by subject  
-- Study statistics  
-- Weekly study reports  
-- GUI using JavaFX or Swing  
-- Web version using Spring Boot  
+* ✏️ Update study sessions
+* 🔍 Search sessions by subject
+* 📊 Study analytics (charts)
+* 📅 Weekly/monthly reports
+* 🎨 Dark mode UI
+* 🌐 Web version using Spring Boot + React
 
----
+## ⭐ Support
 
+If you found this project helpful, please consider giving it a ⭐ on GitHub!
 
-⭐ If you find this project useful, consider giving the repository a star.
+```
+```
